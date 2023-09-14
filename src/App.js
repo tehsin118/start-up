@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./page/home";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 function App() {
   return (
     <div className="App">

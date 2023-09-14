@@ -17,6 +17,7 @@ a,
 .col {
   padding: 0;
   margin: 0;
+  margin-bottom: 0;
 }
 ul {
   list-style: none;
@@ -27,7 +28,7 @@ a {
 
 // ---------------custom margins
 
-.mt30 {
+.mt-30 {
   margin-top: 30px;
 }
 
@@ -37,6 +38,7 @@ a {
   height: 100%;
   object-fit: cover;
 }
+
 input {
   outline: none;
   &::-webkit-inner-spin-button {
