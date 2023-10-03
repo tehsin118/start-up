@@ -1,0 +1,10 @@
+.simpli-navbar {
+  .navbar-nav {
+    .nav-item {
+      a {
+        &.active {
+        }
+      }
+    }
+  }
+}
