@@ -1,11 +1,7 @@
 import React from "react";
 
 const Home = () => {
-  return (
-    <div>
-      <input type="number" />
-    </div>
-  );
+  return <div> </div>;
 };
 
 export default Home;
