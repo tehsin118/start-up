@@ -3,7 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  font-family: "Poppins";
+}
+html {
+  scroll-behavior: smooth;
+}
 h1,
 h2,
 h3,
@@ -13,6 +18,7 @@ h6,
 ul,
 li,
 a,
+p,
 .row,
 .col {
   padding: 0;
