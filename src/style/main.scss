@@ -1,6 +1,16 @@
 @import url("./_global.scss");
-@import url("./_typography.scss");
-@import url("./_variable.scss");
-@import url("./_home.scss");
-@import url("./shared/_navbar.scss");
-@import url("./shared/_footer.scss");
+
+// base style
+@import url("./base/_color.scss");
+@import url("./base/_mixins.scss");
+@import url("./base/_reset.scss");
+@import url("./base/_typography.scss");
+
+// components
+@import url("./components/_button.scss");
+@import url("./components/_input.scss");
+@import url("./components/_select.scss");
+@import url("./components/_checkbox.scss");
+@import url("./components/_switch.scss");
+@import url("./components/_tab.scss");
+@import url("./components/_pagination.scss");
