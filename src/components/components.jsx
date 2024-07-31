@@ -5,8 +5,25 @@ import Button from "./shared/button";
 import Textarea from "./shared/textarea";
 import Swal from "sweetalert2";
 import Checkbox from "./shared/checkbox";
+import RadioButton from "./shared/radioButton";
 
 const Components = () => {
+
+  const [checkboxes, setCheckboxes] = useState({
+    checkbox1: false,
+    checkbox2: false,
+    checkbox3: true,
+  });
+
+  const [selectedRadio, setSelectedRadio] = useState("radio1");
+
+  const handleCheckboxChange = (event) => {
+    const { id, checked } = event.target;
+    setCheckboxes((prevCheckboxes) => ({
+      ...prevCheckboxes,
+      [id]: checked,
+    }));
+  };
 
   const handleDelete = () => {
     Swal.fire({
@@ -30,36 +47,41 @@ const Components = () => {
       }
     });
   };
-  const [checkboxes, setCheckboxes] = useState({
-    checkbox1: false,
-    checkbox2: false,
-    checkbox3: true,
-  });
-  const handleCheckboxChange = (event) => {
-    const { id, checked } = event.target;
-    setCheckboxes((prevCheckboxes) => ({
-      ...prevCheckboxes,
-      [id]: checked,
-    }));
+
+  const handleRadioChange = (event) => {
+    setSelectedRadio(event.target.id);
   };
   return (
     <div className="bg-slate-300">
       <h1>Components</h1>
-      <p>
-        Set colors scheme or design according your requirements,
-      </p>
+      <p>Set colors scheme or design according your requirements,</p>
       <div className="max-w-96 m-auto flex flex-col gap-4">
-        <Input type="password" label="Input" placeholder="Input component" icon={eyeOpen} />
+        <Input
+          type="password"
+          label="Input"
+          placeholder="Input component"
+          icon={eyeOpen}
+        />
         <div className="flex gap-2">
-        <Button text="Click Me" className="w-52 btn-secondary" onClick={handleDelete}/>
-        <Button text="Secondary Button" className="w-52 btn-secondary" loading/>
+          <Button
+            text="Click Me"
+            className="w-52 btn-secondary"
+            onClick={handleDelete}
+          />
+          <Button
+            text="Secondary Button"
+            className="w-52 btn-secondary"
+            loading
+          />
         </div>
 
         <div className="flex gap-2">
-        <Button text="Primary Button" className="w-52 btn-primary"/>
-        <Button text="Primary loading" className="w-52 btn-primary" loading/>
+          <Button text="Primary Button" className="w-52 btn-primary" />
+          <Button text="Primary loading" className="w-52 btn-primary" loading />
         </div>
-   
+<h5>
+  Checkbox
+</h5>
         <>
           <Checkbox
             id="checkbox1"
@@ -80,8 +102,32 @@ const Components = () => {
             checked={checkboxes.checkbox3}
             onChange={handleCheckboxChange}
           />{" "}
-          </>
-        <Textarea label="Textarea" rows={6} placeholder="Enter your textarea content"/>
+        </>
+
+
+        {/* Radio button */}
+        <>
+        <RadioButton
+        id="radio1"
+        name="radio-group"
+        label="Option 1"
+        checked={selectedRadio === "radio1"}
+        onChange={handleRadioChange}
+      />
+      <RadioButton
+        id="radio2"
+        name="radio-group"
+        label="Option 2"
+        checked={selectedRadio === "radio2"}
+        onChange={handleRadioChange}
+      />
+  
+        </>
+        <Textarea
+          label="Textarea"
+          rows={6}
+          placeholder="Enter your textarea content"
+        />
       </div>
     </div>
   );

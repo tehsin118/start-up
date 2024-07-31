@@ -1,0 +1,40 @@
+.radio-wrapper  {
+    display: flex;
+    align-items: center;
+    input[type="radio"] {
+      margin: 0;
+      padding: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 1.2rem;
+      width: 1.2rem;
+      cursor: pointer;
+      border-radius: 100%;
+      border: 1px solid #373737;
+      --b1: 100% 0 0;
+  
+      &:checked,
+      &[aria-checked="true"] {
+        background-color: #373737;
+        animation: radiomark-27 var(--animation-input, 0.2s) ease-out;
+        box-shadow: 0 0 0 4px oklch(var(--b1) / 1) inset,
+          0 0 0 4px oklch(var(--b1) / 1) inset;
+      }
+    }
+  }
+  
+  @keyframes radiomark-27 {
+    0% {
+      box-shadow: 0 0 0 12px oklch(var(--b1) / 1) inset,
+        0 0 0 12px oklch(var(--b1) / 1) inset;
+    }
+    50% {
+      box-shadow: 0 0 0 3px oklch(var(--b1) / 1) inset,
+        0 0 0 3px oklch(var(--b1) / 1) inset;
+    }
+    100% {
+      box-shadow: 0 0 0 4px oklch(var(--b1) / 1) inset,
+        0 0 0 4px oklch(var(--b1) / 1) inset;
+    }
+  }
