@@ -11,7 +11,7 @@ const Checkbox = ({ id, name, label, disabled = false, checked, onChange }) => {
         checked={checked}
         onChange={onChange}
       />
-      <label className="cbx" htmlFor={id}></label>
+      <label className="cbx font-medium text-base" htmlFor={id}></label>
       <label className="lbl text-sm" htmlFor={id}>
         {label}
       </label>
