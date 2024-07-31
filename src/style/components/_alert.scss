@@ -1,0 +1,42 @@
+.swal2-modal {
+    // Buttons
+    .swal2-actions {
+      button {
+        width: 180px;
+        border-radius: 8px;
+      }
+      .swal2-confirm {
+        background: #000 !important;
+        border: 1px solid #000;
+      }
+      .swal2-cancel {
+        background: transparent !important;
+        border: 1px solid #000;
+        color: #000;
+      }
+    }
+  
+    //   title
+    .swal2-title {
+      font-family: Inter !important;
+      font-size: 22px;
+    }
+    .swal2-icon-show {
+      .swal2-icon-content {
+        color: #000 !important;
+      }
+      &.swal2-warning {
+        border-color: #000 !important;
+      }
+  
+      .swal2-success-ring {
+        border-color: #000 !important;
+      }
+      .swal2-success-line-long,
+      .swal2-success-line-tip {
+        border-color: #000 !important;
+        background: #000 !important;
+      }
+    }
+  }
+  

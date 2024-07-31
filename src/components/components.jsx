@@ -3,8 +3,32 @@ import Input from "./shared/input";
 import eyeOpen from "../assets/icons/eye-open.svg";
 import Button from "./shared/button";
 import Textarea from "./shared/textarea";
+import Swal from "sweetalert2";
 
 const Components = () => {
+
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure you want to delete this bot?",
+      text: "You won't be able to revert this!--- set your own colors in alert.scss",
+      icon: "warning",
+      width: 600,
+      showCancelButton: true,
+      buttonsStyling: true,
+      confirmButtonColor: "#000",
+      cancelButtonColor: "#000",
+      confirmButtonText: "Delete",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          width: 600,
+          title: "Deleted!",
+          text: "Your content has been deleted.",
+          icon: "success",
+        });
+      }
+    });
+  };
   return (
     <div className="bg-slate-300">
       <h1>Components</h1>
@@ -14,7 +38,7 @@ const Components = () => {
       <div className="max-w-96 m-auto flex flex-col gap-4">
         <Input type="password" label="Input" placeholder="Input component" icon={eyeOpen} />
         <div className="flex gap-2">
-        <Button text="Secondary loading" className="w-52 btn-secondary"/>
+        <Button text="Click Me" className="w-52 btn-secondary" onClick={handleDelete}/>
         <Button text="Secondary Button" className="w-52 btn-secondary" loading/>
         </div>
 
