@@ -1,0 +1,102 @@
+.checkbox-wrapper {
+    input[type="checkbox"] {
+      display: none;
+      visibility: hidden;
+    }
+  
+    label {
+      display: inline-block;
+    }
+  
+    .cbx {
+      position: relative;
+      top: 1px;
+      width: 17px;
+      height: 17px;
+      border: 1px solid #000;
+      border-radius: 3px;
+      vertical-align: middle;
+      transition: background 0.1s ease;
+      cursor: pointer;
+    }
+  
+    .cbx:after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 5px;
+      width: 5px;
+      height: 11px;
+      opacity: 0;
+      transform: rotate(45deg) scale(0);
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transition: all 0.3s ease;
+      transition-delay: 0.15s;
+    }
+  
+    .lbl {
+      margin-left: 5px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #3d3d3d;
+    }
+  
+    input[type="checkbox"]:checked ~ .cbx {
+      border-color: transparent;
+      background: #000;
+      animation: jelly-42 0.6s ease;
+    }
+  
+    input[type="checkbox"]:disabled ~ .cbx {
+      border-color: #6c757d;
+      background: #ced4da;
+      animation: jelly-42 0.6s ease;
+      cursor: no-drop;
+    }
+  
+    input[type="checkbox"]:disabled ~ .lbl {
+      cursor: no-drop;
+      color: #6c757d;
+    }
+  
+    input[type="checkbox"]:checked ~ .cbx:after {
+      opacity: 1;
+      transform: rotate(45deg) scale(1);
+    }
+    input[type="checkbox"]:checked:disabled ~ .cbx {
+      background: rgb(143, 141, 141);
+    }
+    .cntr {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    @keyframes jelly-42 {
+      from {
+        transform: scale(1, 1);
+      }
+      30% {
+        transform: scale(1.25, 0.75);
+      }
+      40% {
+        transform: scale(0.75, 1.25);
+      }
+      50% {
+        transform: scale(1.15, 0.85);
+      }
+      65% {
+        transform: scale(0.95, 1.05);
+      }
+      75% {
+        transform: scale(1.05, 0.95);
+      }
+      to {
+        transform: scale(1, 1);
+      }
+    }
+  }
+  

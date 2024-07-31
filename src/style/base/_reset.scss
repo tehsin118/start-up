@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // outline: 1px solid red !important;
 }
 html,
 body,
@@ -93,11 +94,19 @@ video,
   margin: 0;
   padding: 0;
   border: 0;
-  vertical-align: baseline;
+  outline: 0;
+  font-size: unset;
+}
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
 }
 body {
   overflow-x: hidden;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 /* HTML5 display-role reset for older browsers */
 
@@ -115,9 +124,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: normal;
-}
 
 ol,
 ul {
@@ -141,7 +147,7 @@ q {
   &:before,
   &:after {
     content: "";
-    content: none;
+    content: "";
   }
 }
 
@@ -165,4 +171,8 @@ input {
   &::-webkit-outer-spin-button {
     display: none;
   }
+}
+input:-internal-autofill-selected {
+  background: transparent !important;
+  background-color: transparent !important;
 }

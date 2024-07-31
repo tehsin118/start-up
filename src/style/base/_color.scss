@@ -1,19 +1,22 @@
-:root {
-  --black: #000000;
-  --white: #ffffff;
-  --primary: #36454f;
-  --secondary: #667085;
-  --accent: #3385ff;
-  --success: #0d894f;
-  --success: #0d894f;
-  --light-success: #e7f4ee;
-  --warning: #e46a11;
-  --light-warning: #fdf1e8;
-  --danger: #e22400;
-  --warning: #f04438;
-  --light-warning: #feedec;
-  --gray: #b6b6b6;
-  --light-gray: #f0f1f3;
-  --background: #f9f9fc;
-  --dark-gray: #7394c7;
+// Light Mode Style
+[data-theme="light"] {
+  --bg-color: #c2c2c2;
+  --text-color: #373737;
+  --light-gray: #828282;
+  --dark-gray: #373737;
+  --forest-green: #00661f;
+  --neon-green: #4dfe7e;
+  --medium-green: #148c36;
+  --dark-green: #01320f;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --bg-color: #c2c2c2;
+  --text-color: #373737;
+  --dark-gray: #373737;
+  --forest-green: #00661f;
+  --neon-green: #4dfe7e;
+  --medium-green: #148c36;
+  --dark-green: #01320f;
 }

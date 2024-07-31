@@ -1,16 +1,21 @@
-@import url("./_global.scss");
+@import "./global";
 
 // base style
-@import url("./base/_color.scss");
-@import url("./base/_mixins.scss");
-@import url("./base/_reset.scss");
-@import url("./base/_typography.scss");
+@import "./base/color";
+@import "./base/mixins";
+@import "./base/reset";
+@import "./base/font";
+@import "./base/typography";
+@import "./base/tailwindConfig";
+@import "./base/animations";
 
 // components
-@import url("./components/_button.scss");
-@import url("./components/_input.scss");
-@import url("./components/_select.scss");
-@import url("./components/_checkbox.scss");
-@import url("./components/_switch.scss");
-@import url("./components/_tab.scss");
-@import url("./components/_pagination.scss");
+@import "./components/button";
+@import "./components/checkbox";
+@import "./components/input";
+@import "./components/pagination";
+@import "./components/footer";
+@import "./components/textarea";
+
+// pages
+@import "./page/home";
