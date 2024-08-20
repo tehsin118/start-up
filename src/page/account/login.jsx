@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import Input from "../../components/shared/input";
 import eyeOpen from "../../assets/icons/eye-open.svg";
+import google from "../../assets/icons/google.svg";
 import Checkbox from "../../components/shared/checkbox";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/shared/button";
 
 const Login = () => {
   const navigate = useNavigate();
-const [loading, setLoading] = useState(false)
+  const url = "https://dummyjson.com/auth/login";
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "tehsin118@gmail.com",
     password: "12345678",
@@ -131,7 +133,7 @@ const [loading, setLoading] = useState(false)
                     onChange={handleChange}
                   />
 
-                  <div className="remember-me-div flex items-center justify-between !mt-2">
+                  <div className="remember-me-div flex items-center justify-between !mt-3">
                     <div className="left v-center gap-2">
                       <Checkbox
                         label="Remember me!"
@@ -151,8 +153,20 @@ const [loading, setLoading] = useState(false)
                     </p>
                   </div>
                 </div>
+                <Button
+                  className="btn-primary w-full h-11"
+                  text="Log in"
+                  onClick={handleSubmit}
+                />
 
-                <Button className="btn-primary w-full h-11" text="Log in"  onClick={handleSubmit}/>
+                <div>
+                  <p className="font-semibold text-center ">or Login with</p>
+                  <img src={google} alt="google" className="m-auto mt-6 cursor-pointer" />
+                  <p className="font-semibold text-center mt-16">
+                  Doesn’t have an account? 
+                    <span className="cursor-pointer text-blue-600" onClick={()=>navigate("/register")}> Create Account</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
