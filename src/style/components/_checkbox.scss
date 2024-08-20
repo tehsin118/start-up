@@ -13,7 +13,7 @@
       top: 1px;
       width: 17px;
       height: 17px;
-      border: 1px solid #000;
+      border: 1px solid #03568F;
       border-radius: 3px;
       vertical-align: middle;
       transition: background 0.1s ease;
@@ -44,7 +44,7 @@
   
     input[type="checkbox"]:checked ~ .cbx {
       border-color: transparent;
-      background: #000;
+      background: #03568F;
       animation: jelly-42 0.6s ease;
     }
   

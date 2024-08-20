@@ -1,22 +1,22 @@
 button {
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   line-height: normal;
-  border: 1px solid black;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
   transition: all 0.2s ease-in;
   padding: 8px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .rotate-360 {
     animation: rotateAnimation 2s linear infinite;
   }
 
   &.btn-primary {
     color: #fff;
-    background: black;
+    background: linear-gradient(270deg, #00f260 -2.94%, #0575e6 101.71%);
   }
 
   &.btn-secondary {
@@ -29,7 +29,6 @@ button {
   &:disabled {
     cursor: not-allowed;
   }
-
 
   @keyframes rotateAnimation {
     from {

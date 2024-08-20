@@ -46,7 +46,6 @@ const Textarea = ({
             autoComplete="off"
             spellCheck
             rows={rows}
-
             id={id}
             name={name}
             value={value}

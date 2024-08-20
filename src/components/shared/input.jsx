@@ -64,7 +64,7 @@ const Input = ({
         style={inputStyle}
       >
         <label className={labelClass}>{label}</label>
-        <div className="input-wrapper   ">
+        <div className={`input-wrapper   ${wrapperClass}`}>
           <input
             autoComplete="off"
             type={getInputType()}

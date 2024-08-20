@@ -55,17 +55,20 @@ const Components = () => {
     <div className="bg-slate-300">
       <h1>Components</h1>
       <p>Set colors scheme or design according your requirements,</p>
-      <div className="max-w-96 m-auto flex flex-col gap-4">
+      <div className="container ">
+
+      <div className="max-w-[800px] m-auto flex flex-col gap-4 ">
         <Input
-          type="password"
+          type="number"
           label="Input"
           placeholder="Input component"
-          icon={eyeOpen}
+       
+          // onChange={handleChange}
         />
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-col">
           <Button
             text="Click Me"
-            className="w-52 btn-secondary"
+            className="w-full btn-secondary"
             onClick={handleDelete}
           />
           <Button
@@ -76,7 +79,7 @@ const Components = () => {
         </div>
 
         <div className="flex gap-2">
-          <Button text="Primary Button" className="w-52 btn-primary" />
+          <Button text="Primary Button" className="w-52 btn-primary flex items-center justify-center gap-2" imgClass="w-4"/>
           <Button text="Primary loading" className="w-52 btn-primary" loading />
         </div>
 <h5>
@@ -128,6 +131,7 @@ const Components = () => {
           rows={6}
           placeholder="Enter your textarea content"
         />
+      </div>
       </div>
     </div>
   );

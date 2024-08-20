@@ -1,39 +1,37 @@
 * {
-  font-family: "Inter";
+  font-family: "Nunito", "Inter";
+  line-height: normal;
 }
 
 body {
   h1 {
-    font-family: "Inter";
-    font-size: 67.276px;
-  }
+    font-size: 64px;
+    letter-spacing: -2px;
+  } 
   h2 {
-    font-family: "Inter";
-    font-size: 40px;
-    line-height: 100%;
+    font-size: 48px;
   }
   h3 {
-    font-family: "Inter";
-    font-size: 20px;
+    font-size: 32px;
   }
+
   h4 {
-    font-family: "Inter";
+    font-size: 24px;
+  }
+  .large {
     font-size: 18px;
   }
   p {
-    font-family: "Inter";
-    font-size: 15px;
+    font-size: 16px;
+  }
+  .medium {
+    font-size: 14px;
   }
   .small {
     font-size: 12px;
   }
-  a{
-    font-family: "Inter","Roboto";
-  }
 }
 
-.font-Inter {
-  font-family: "Inter", "Roboto";
+.font-Pacifico {
+  font-family: "Pacifico", "Inter";
 }
- 
- 
