@@ -3,20 +3,20 @@
   flex-direction: column;
   gap: 8px;
   label {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 500;
   }
   .input-wrapper {
-    border-radius: 10px;
-    background: #fff;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
-    outline: 1px solid #E7E7E7;
+    outline: 1px solid #bebebe;
     padding: 0 10px;
     height: 44px;
     input {
       padding: 10px 0;
       color: #000;
+      font-family: Inter;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -39,7 +39,10 @@
       height: 20px;
       cursor: pointer;
     }
-
+    &.disabled {
+      background-color: #6b6b6b31;
+      color: #000;
+    }
     // &::after{
     //   content: "";
     //   position: absolute;
@@ -49,7 +52,21 @@
     //   width: 30px;
     // }
   }
-
+  &:focus-visible {
+    .input-wrapper {
+      outline: 1px solid #308748 !important;
+    }
+  }
+  &:focus {
+    .input-wrapper {
+      outline: 1px solid #308748 !important;
+    }
+  }
+  &:focus-within {
+    .input-wrapper {
+      outline: 1px solid #308748 !important;
+    }
+  }
   .text-xs {
     font-size: 12px;
     color: #dc2626;

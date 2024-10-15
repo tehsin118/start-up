@@ -1,0 +1,61 @@
+.tameel-table {
+  // header
+  .ant-table-thead {
+    .ant-table-cell {
+      color: #0000009c;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+  .ant-table-tbody {
+    .ant-table-cell {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  // trigger icon when field is selected
+  .ant-dropdown-trigger {
+    &.active {
+      color: #308748;
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.ant-table-filter-dropdown {
+  .ant-dropdown-menu {
+    .ant-checkbox-wrapper {
+      align-items: center !important;
+    }
+
+    // dropdown list items
+    .ant-dropdown-menu-item {
+      span {
+        font-size: 16px !important;
+      }
+    }
+    .ant-dropdown-menu-item-selected {
+      background-color: #e0ede4 !important;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background: #308748 !important;
+      border-color: #308748 !important;
+    }
+  }
+
+  .ant-table-filter-dropdown-btns {
+    .ant-btn-primary {
+      background: #308748;
+      border-radius: 4px;
+      border: none;
+      &:hover {
+        background: #308748;
+      }
+    }
+  }
+}

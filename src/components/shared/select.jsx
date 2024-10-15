@@ -1,9 +1,9 @@
 import React from "react";
 import { Select } from "antd";
-// import chevron from "../assets/icons/chevron-down.svg";
 
 const CustomSelect = ({
   wrapperClasses,
+  className,
   value,
   onChange,
   options,
@@ -14,6 +14,8 @@ const CustomSelect = ({
   minWidth,
   height,
   width,
+  placeholder,
+  showSearch,
 }) => {
   const selectStyle = {
     minHeight: minHeight,
@@ -27,18 +29,21 @@ const CustomSelect = ({
     <>
       <div
         className={`select-wrapper ${wrapperClasses}  ${error ? "error" : ""} `}
-        style={selectStyle}
       >
-          <label className={value ? "active" : ""}> {label}</label>
+        <label className={value ? "active" : ""}> {label}</label>
         <Select
+          style={selectStyle}
           onChange={onChange}
           options={options?.map((option) => ({
             value: option.value,
             label: option.label,
           }))}
+          showSearch={showSearch}
           value={value}
+          className={"custom-select"}
+          popupClassName="custom-select-dropdown"
+          placeholder={placeholder}
         />
-
       </div>
     </>
   );

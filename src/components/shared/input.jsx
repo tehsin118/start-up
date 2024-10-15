@@ -59,12 +59,12 @@ const Input = ({
   };
   return (
     <>
-      <div
-        className={`input-box  ${error ? "error" : ""} ${className}`}
-        style={inputStyle}
-      >
-        <label className={labelClass}>{label}</label>
-        <div className={`input-wrapper   ${wrapperClass}`}>
+      <div className={`input-box  ${error ? "error" : ""} ${className}`}>
+        {label && <label className={labelClass}>{label}</label>}
+        <div
+          className={`input-wrapper  ${wrapperClass} ${disabled && "disabled"}`}
+          style={inputStyle}
+        >
           <input
             autoComplete="off"
             type={getInputType()}
@@ -87,10 +87,11 @@ const Input = ({
             />
           )}
         </div>
-        {
-          errorMessage &&
-        <p className="extra-small text-xs font-medium text-red-600">{errorMessage}</p>
-        }
+        {errorMessage && (
+          <p className="extra-small text-xs font-medium text-red-600">
+            {errorMessage}
+          </p>
+        )}
       </div>
     </>
   );

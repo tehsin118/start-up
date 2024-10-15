@@ -31,9 +31,6 @@ const Textarea = ({
     maxWidth: maxWidth,
   };
 
- 
-
-   
   return (
     <>
       <div
@@ -41,7 +38,9 @@ const Textarea = ({
         style={inputStyle}
       >
         <label className="text-primary-text">{label}</label>
-        <div className="input-wrapper   ">
+        <div
+          className={`input-wrapper  ${wrapperClass} ${disabled && "disabled"}`}
+        >
           <textarea
             autoComplete="off"
             spellCheck
