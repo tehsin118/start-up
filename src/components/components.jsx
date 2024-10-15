@@ -242,9 +242,7 @@ const Components = () => {
       onFilter: (value, record) => record.status.startsWith(value),
       render: (_, record) => (
         <>
-          <a href="">
-            <Chips status={record?.status} />
-          </a>
+          <Chips status={record?.status} />
         </>
       ),
     },
@@ -275,7 +273,7 @@ const Components = () => {
       key: "action",
       render: (_, record) => (
         <>
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3">
             {/* <img
               src={viewIcon}
               alt=""
@@ -289,10 +287,18 @@ const Components = () => {
                 )
               }
             /> */}
-            <MdOutlineRemoveRedEye />
-            <ImBin />
-
-            {/* <img src={binIcon} alt="" className="cursor-pointer" /> */}
+            <MdOutlineRemoveRedEye
+              size={22}
+              color="green"
+              title="view"
+              className="cursor-pointer"
+            />
+            <ImBin
+              size={18}
+              color="red"
+              title="view"
+              className="cursor-pointer"
+            />
           </div>
         </>
       ),

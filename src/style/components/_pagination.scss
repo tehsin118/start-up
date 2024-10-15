@@ -1,1 +1,31 @@
 // pagination style here
+.ant-table-pagination {
+  display: flex;
+  justify-content: center !important;
+
+  .ant-pagination-item {
+    border-radius: 5px;
+    border: 1px solid #0a6f26 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: #0a6f26 !important;
+      font-weight: 600;
+    }
+    &:hover {
+      background: #0a6f272f !important;
+    }
+
+    &.ant-pagination-item-active {
+      background: #0a6f26;
+      a {
+        color: #fff !important;
+      }
+
+      &:hover {
+        background: #0a6f26 !important;
+      }
+    }
+  }
+}
