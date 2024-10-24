@@ -1,27 +1,28 @@
-@import "./global";
+@use "./global";
+@use "./global";
 
 // base style
-@import "./base/color";
-@import "./base/mixins";
-@import "./base/reset";
-@import "./base/font";
-@import "./base/typography";
-@import "./base/tailwindConfig";
-@import "./base/animations";
+@use "./base/color";
+@use "./base/mixins";
+@use "./base/reset";
+@use "./base/font";
+@use "./base/typography";
+@use "./base/tailwindConfig";
+@use "./base/animations";
 
 // components
-@import "./components/button";
-@import "./components/checkbox";
-@import "./components/input";
-@import "./components/pagination";
-@import "./components/switch";
-@import "./components/footer";
-@import "./components/textarea";
-@import "./components/alert";
-@import "./components/radioButton";
-@import "./components/table";
-@import "./components/select";
+@use "./components/button";
+@use "./components/checkbox";
+@use "./components/input";
+@use "./components/pagination";
+@use "./components/switch";
+@use "./components/footer";
+@use "./components/textarea";
+@use "./components/alert";
+@use "./components/radioButton";
+@use "./components/table";
+@use "./components/select";
 
 // pages
-@import "./page/home";
-@import "./page/account";
+@use "./page/home";
+@use "./page/account";
