@@ -1,10 +1,4 @@
-import {
-  Outlet,
-  Route,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-} from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import NotFound from "./page/notFound";
 import Login from "./page/account/login";
 import ResetPassword from "./page/account/resetPassword";
@@ -18,13 +12,13 @@ const AppLayout = () => {
     </>
   );
 };
-const AppNew = () => {
-  return (
-    <>
-      <Outlet />
-    </>
-  );
-};
+// const AppNew = () => {
+//   return (
+//     <>
+//       <Outlet />
+//     </>
+//   );
+// };
 
 const appRouter = createBrowserRouter([
   {
