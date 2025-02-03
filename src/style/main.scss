@@ -1,9 +1,7 @@
 @use "./global";
-@use "./global";
 
 // base style
 @use "./base/color";
-@use "./base/mixins";
 @use "./base/reset";
 @use "./base/font";
 @use "./base/typography";
@@ -22,7 +20,3 @@
 @use "./components/radioButton";
 @use "./components/table";
 @use "./components/select";
-
-// pages
-@use "./page/home";
-@use "./page/account";

@@ -1,20 +1,73 @@
-import { Route, Routes } from "react-router-dom";
-import Home from "./page/home";
+import {
+  Outlet,
+  Route,
+  RouterProvider,
+  Routes,
+  createBrowserRouter,
+} from "react-router-dom";
 import NotFound from "./page/notFound";
 import Login from "./page/account/login";
+import ResetPassword from "./page/account/resetPassword";
+import Verify from "./page/account/verify";
+import Forget from "./page/account/forget";
 import Register from "./page/account/register";
-
-function App() {
+const AppLayout = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-
-        <Route path="/components" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <RouterProvider router={appRouter} />
     </>
   );
-}
+};
+const AppNew = () => {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
+};
 
-export default App;
+const appRouter = createBrowserRouter([
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+  {
+    path: "/",
+    element: <Login />,
+  },
+
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/forget-password",
+    element: <Forget />,
+  },
+  {
+    path: "/verify-code",
+    element: <Verify />,
+  },
+
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
+  },
+  // {
+  //   path: "/",
+  //   element: <Dashboard />,
+  //   children: [
+  //     {
+  //       path: "/dashboard",
+  //       element: <Dashboardoutlet />,
+  //       children: [
+  //         {
+  //           path: "/dashboard",
+  //           element: <Dashboardmain />,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+]);
+export default AppLayout;
