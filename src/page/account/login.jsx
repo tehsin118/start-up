@@ -3,7 +3,9 @@ import React from "react";
 const Login = () => {
   return (
     <>
-      <h1 className="text-base">Login</h1>
+      <div className="container">
+        <h1 className="bg-black/54 text-base text-mint-500">Login</h1>
+      </div>
     </>
   );
 };
