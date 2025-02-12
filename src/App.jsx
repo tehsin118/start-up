@@ -12,13 +12,6 @@ const AppLayout = () => {
     </>
   );
 };
-// const AppNew = () => {
-//   return (
-//     <>
-//       <Outlet />
-//     </>
-//   );
-// };
 
 const appRouter = createBrowserRouter([
   {
